@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\KingdomHallController;
 
 /*
@@ -17,4 +18,5 @@ use App\Http\Controllers\KingdomHallController;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('kingdom-halls', KingdomHallController::class);
+    Route::apiResource('contacts', ContactController::class);
 });
